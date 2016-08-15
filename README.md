@@ -1,6 +1,6 @@
 # Draw My Thing Cheat
 
-__View this site live on [github.io](skylerspaeth.github.io/dmtcheat)__
+__View this site live on [github.io](skylerspaeth.github.io/dmtcheat)__.
 
 The original source code for this came from Croutonix. I took his code, redesigned the interface and added a few UI features.
 
