@@ -2,9 +2,10 @@
 
 __View this site live on [github.io](skylerspaeth.github.io/dmtcheat)__
 
+The original source code for this came from Croutonix. I took his code, redesigned the interface and added a few UI features.
+
 
 Croutonix's description:
-
 
 The goal of this project is to help people get really good score using an interactive word list for the Draw My Thing on Mineplex server. Currently, this only works on Google Chrome and Safari.
 
