@@ -1,6 +1,6 @@
 # Draw My Thing Cheat
 
-Forked from origianl:
+Forked from original:
 
 The goal of this project is to help people get really good score using an interactive word list for the Draw My Thing on Mineplex server. Currently, this only works on Google Chrome and Safari.
 
