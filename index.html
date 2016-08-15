@@ -6,10 +6,16 @@
 	<style>
 		body {
 			font-family: Arial, Helvetica, sans-serif;
-			background: #3A4042;
+			background-color: #3f3f3f;
 		}
 		p {
 			margin: 0px 0px;
+		}
+		a{
+				color: #262626;
+		}
+		a:visited{
+  			color: #262626;
 		}
 		table, th, td {
 	    	border: none;
@@ -25,50 +31,60 @@
 			margin: 5px 0px;
 			font-size: 16px;
 			border: none;
-			border-bottom: 3px solid #DDD;
-	        -webkit-transition: 0.5s;
-    		transition: 1s;
+			border-bottom: 0px solid #272727;
+	        -webkit-transition: 0.1s;
+    		transition: 0.1s;
     		outline: none;
     		text-align: center;
 		}
 		input[type=text]:focus {
 			border: none;
-    		border-bottom: 3px solid black;
+    		border-bottom: 5px solid #272727;
 		}
 		.toggle-radio {
 			display: none;
 		}
-		.toggle-label { 
-		    text-align: center; 
+		.toggle-label {
+		    text-align: center;
 		    margin: 3px 3px;
-		    padding: 5px 10px; 
-		    color: #000; 
-		    background-color: #FFF;
-		    border: 3px solid #DDD;
-		    border-radius: 5px; 
+		    padding: 5px 10px;
+		    color: #000;
+		    background-color: #666666;
+		    border: 3px solid #535353;
+		    border-radius: 5px;
     		font-size: 16px;
     		font-weight: bold;
-		    display: inline-block; 
- 			cursor: pointer;
- 	        -webkit-transition: 0.5s;
-    		transition: 0.5s;
+		    display: inline-block;
+ 				cursor: pointer;
+				width: 10px;
 		}
 		.toggle-label:hover {
     		border-color: #555;
-    	}
-    	.toggle-radio:checked + .toggle-label{
+    }
+    .toggle-radio:checked + .toggle-label{
     		border-color: #000;
-    	}
+    }
+		[id^="input"] {
+				border-radius: 10px;
+				background-color: #272727;
+		}
+		.source-words {
+				float: right;
+				position: fixed;
+				top: 0;
+				right: 20px;
+		}
+		#img { width: 75%; }
+		.footer {
+				bottom: 5px;
+				right: 10px;
+				position: fixed;
+		}
 	</style>
 	<body>
 		<center>
 		<br>
-		Please share and give feedback!
-		<table>
-			<tr>
-				<td><a href="./wordlist.html">Word List</a></td><td></td>
-			</tr>
-		</table>
+		<a href="./wordlist.html" class="source-words"><img id="img" src="./bookmark.png" alt="View source words"></a>
 		<h2 style="margin: 0px 0px;">Draw My Thing Cheat</h2><br>
 		Select the word length
 		<table>
@@ -118,11 +134,15 @@
 		</table>
 
 		<br><i><p id="multiplewords"></p></i>
-		<br><b>WORD LIST</b><br>
+		<br><b>Possible Words</b><br>
 		<p id="wordcount"><p>
 		<hr style="width: 300px; border: 1px solid black;">
 		<p id="wordlist"></p>
 		</center>
+
+		<footer class="footer">
+			Based off Croutonix's <a href="https://github.com/Croutonix/dmtcheat">dmtcheat</a>. Revamped by Skyler Spaeth
+		</footer>
 
 		<script>
 			var default_length = 5
@@ -148,7 +168,7 @@
 						document.getElementById("cell" + i).style.display = "none";  // Hide it
 					}
 					document.getElementById("input" + i).value = "";
-				}	
+				}
 
 				if (wordLength == 0) {wordLength = 12}
 				findWords();  // Show all word with that length
@@ -170,7 +190,7 @@
 		        	}
 		    	}
 		    	rawFile.send(null);
-			}		
+			}
 
 			function findWords() {
 				var wordsFound = []
